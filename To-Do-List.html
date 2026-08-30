@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List </title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="logo4.png">
+<link rel="manifest" href="manifest.json">
+
+
+    |<style>
+
+
+        body{
+           background-color: #111827 ;
+           margin: 0;
+           padding: 0;
+        }
+
+
+        div{
+            background-color: #059669 ;
+            margin: 40px auto;
+            width: 90%;
+            max-width: 450px;      
+            padding: 20px;           
+            border-radius: 10px;
+            height: auto; 
+        }
+
+
+        .to-do-list{
+            font-family: "Edu VIC WA NT Hand", cursive;
+            text-align: center;
+        }
+         
+        input[type="text"]{
+            border-radius: 8px;
+            width: 330px;
+            padding: 10px;
+            font-family: "Vazirmatn", sans-serif;
+             width: 100%;             
+             max-width: 250px; 
+        }
+
+         label {
+           display: block;
+           font-family: "Vazirmatn", sans-serif;
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+    <div>
+
+
+        <h1 class="to-do-list">
+            To Do List
+        </h1>
+       
+   <label><input type="checkbox"> <input type="text" placeholder="کار خود را بنویسید"></label><br>
+   <label><input type="checkbox"> <input type="text" placeholder="کار خود را بنویسید"></label><br>
+   <label><input type="checkbox"> <input type="text" placeholder="کار خود را بنویسید"></label><br>
+   <label><input type="checkbox"> <input type="text" placeholder="کار خود را بنویسید"></label><br>
+   <label><input type="checkbox"> <input type="text" placeholder="کار خود را بنویسید"></label><br>
+   <label><input type="checkbox"> <input type="text" placeholder="کار خود را بنویسید"></label><br>
+   <label><input type="checkbox"> <input type="text" placeholder="کار خود را بنویسید"></label><br>
+   <label><input type="checkbox"> <input type="text" placeholder="کار خود را بنویسید"></label><br>
+
+  
+</div>
+
+<script>
+  const t = document.querySelectorAll('input[type="text"]');
+  const c = document.querySelectorAll('input[type="checkbox"]');
+
+  t.forEach((i,n)=> i.value = localStorage['t'+n] || '');
+  c.forEach((i,n)=> i.checked = localStorage['c'+n] === '1');
+
+  t.forEach((i,n)=> i.oninput = ()=> localStorage['t'+n] = i.value);
+  c.forEach((i,n)=> i.onchange = ()=> localStorage['c'+n] = i.checked ? '1' : '0');
+</script>
+
+
+<script>
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
+</script>
+
+</body>
+
+
+</html>

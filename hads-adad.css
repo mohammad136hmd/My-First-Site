@@ -1,0 +1,51 @@
+body{
+    background-color: #0F172A;
+    justify-content: center;
+    display: flex;
+    margin: 200px;
+    text-align: right;
+}
+
+.box{
+    border-radius: 10px;
+    background-color: #1E293B;
+    padding: 20px;
+}
+
+.game{
+    padding: 0px;
+}
+
+.title{
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 800;
+    color: #F8FAFC;
+}
+
+.text{
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 500;
+    color: #F8FAFC;
+}
+
+#checkButton{
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
+}
+
+#newGameButton{
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 500;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
+}
+
+#guessInput{
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 500;
+    text-align: right;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
+}
